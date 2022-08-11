@@ -1,38 +1,124 @@
-.App {
+#root,
+html,
+body {
+  margin: 0;
+  padding: 0px;
+  height: 100vh;
+  box-sizing: border-box;
+
+
+}
+
+.card {
+  height: 26vh;
+  width: 40vw;
+ border-radius: 16px;
+  box-shadow: 2px 2px 2px 5px rgb(202, 194, 194);
+  position: relative;
+  font-size: 10px;
+  padding:2%;
+
+  margin-left: 0%;
+  padding:2%;
+  margin-right: auto;
+  font-style: italic;
+  left: 6%;
+  top: -60%;
+  z-index: 1;
+  color:brown;
+  background-color: rgb(224, 244, 252);
+
+
+
+}
+p{
+  color:black;
+  font-size:30px;
+  font-weight:7300;
   text-align: center;
+  text-decoration: underline;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  height: 800px;
+  background-position: center;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app img {
+  height: 100vh;
+  width:100vw;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.button{
+  height:40px;
+  width:40%;
+  padding:2px;
+  border-radius:15px;
+  border:1px solid blue;
+  background-color:white;
+  color:blue;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+position:relative;
+left:30%;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.button span {
+  color: #164ca7;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+  
+.button:hover {
+  animation: rotate 0.7s ease-in-out both;
+}
+  
+.button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+  
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+  
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}  
+
+@media only screen and (max-width: 600px) {
+  .card {
+      width: 80%;
+      height: 30%;
   }
 }
